@@ -1,11 +1,15 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+app.use(bodyParser.json());
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log('Listening on http://localhost:3000');
-});
+const routes = require('./routes');
 
-// routes should be moved to another folder
-app.get('/', (request, response) => {
-    response.send(request.protocol + '://' + request.hostname);
+app.use('/', routes);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.listen(PORT, () => {
+    console.log(`App started on http://localhost:${PORT}`);
 });
