@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 // router.get('/scraper', scraperController.getDataFromUrl);
 
 router.get('/scraper', (req, res) => {
-    res.send("Scraper implementation in progress...")
+    res.send("Scraper implementation in progress...");
 });
 
 module.exports = router;
