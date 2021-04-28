@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import { VscThreeBars } from 'react-icons/vsc';
 import { Nav, NavbarContainer, NavLogo, MenuIcon, NavMenu, NavItem, NavLinks, NavBtnLink, NavBtn } from './NavbarElements';
