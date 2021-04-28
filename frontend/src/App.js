@@ -3,6 +3,8 @@ import HomePage from './pages/HomePage'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
+import MainPage from './pages/MainPage';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
         <Route path='/learn' component={HomePage} exact />
         <Route path='/signin' component={SignInPage} exact />
         <Route path='/signup' component={SignUpPage} exact />
-        {/* <Route component={NotFoundPage}></Route> */}
+        <Route path='/main' component={MainPage} exact />
+        <Route component={NotFound}/>
       </Switch>
     </Router>
   );
