@@ -1,11 +1,16 @@
 import './App.css';
-import Home from './pages'
-import {BrowserRouter as Router} from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import SignInPage from './pages/SignInPage';
 
 function App() {
   return (
     <Router>
-      <Home />
+      <Switch>
+        <Route path='/' component={HomePage} exact />
+        <Route path='/signin' component={SignInPage} exact />
+        {/* <Route component={NotFoundPage}></Route> */}
+      </Switch>
     </Router>
   );
 }

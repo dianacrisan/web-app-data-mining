@@ -1,22 +1,37 @@
 import React from 'react';
-import { Button } from 'react-scroll'
+import { Button } from '../ButtonElements';
+import { TopLine, InfoContainer, BtnWrap, InfoWrapper, Img, Subtitle, InfoRow, Column1, Column2, Heading, ImgWrap, TextWrapper } from './InfoSectionElements';
 
-const InfoSection = () => {
+const InfoSection = ({primary, dark, dark2, lightBg, id, imgStart, topLine, lightText, darkText, headline, description, buttonLabel, img, alt}) => {
     return (
         <>
-            <InfoContainer id={id}>
+            <InfoContainer lightBg={lightBg} id={id}>
                 <InfoWrapper>
-                    <InfoRow>
+                    <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
-                                <TopLine>TopLine</TopLine>
-                                <Heading>Heading</Heading>
-                                <Subtitle>Subtitle</Subtitle>
+                                <TopLine>{topLine}</TopLine>
+                                <Heading lightText={lightText}>{headline}</Heading>
+                                <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <Button to="home">Button</Button>
+                                    <Button to='home'
+                                            smooth={true}
+                                            duration={500}
+                                            spy={true}
+                                            exact="true"
+                                            offset={-80} // for triggering the lines in nav
+                                            primary={primary ? 1 : 0}
+                                            dark={dark ? 1 : 0}
+                                            dark2={dark2 ? 1 : 0}
+                                    >{buttonLabel}</Button>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
+                        <Column2>
+                            <ImgWrap>
+                                <Img src={img} alt={alt}/>
+                            </ImgWrap>
+                        </Column2>
                     </InfoRow>
                 </InfoWrapper>
             </InfoContainer>
