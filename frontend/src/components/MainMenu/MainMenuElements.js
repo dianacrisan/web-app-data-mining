@@ -66,6 +66,7 @@ export const MainMenuLink = styled(LinkR)`
 export const MainMenuBtnWrap = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 `;
 
 export const MainMenuRoute = styled(LinkR)`
