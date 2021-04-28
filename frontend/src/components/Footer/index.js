@@ -15,10 +15,9 @@ const Footer = () => {
                     <FooterLinksWrapper>
                         <FooterLinkItems>
                             <FooterLinkTitle>About the Project</FooterLinkTitle>
-                            <FooterLinkScroll to="/">How it works</FooterLinkScroll>
-                            <FooterLinkScroll to="/">Discover data mining</FooterLinkScroll>
-                            <FooterLinkScroll to="/">Learn something new</FooterLinkScroll>
-                            <FooterLinkScroll to="/">Terms of Service</FooterLinkScroll>
+                            <FooterLinkScroll to="about">How it works</FooterLinkScroll>
+                            <FooterLinkScroll to="discover">Discover data mining</FooterLinkScroll>
+                            <FooterLinkScroll to="learn">Learn something new</FooterLinkScroll>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>

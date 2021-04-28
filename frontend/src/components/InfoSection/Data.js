@@ -30,7 +30,7 @@ export const homeDiscoverObject = {
     imgStart: true,
     img: require('../../images/data.svg').default,
     alt: 'discover',
-    dark: false,
+    dark: true,
     primary: true
 }
 

@@ -8,6 +8,9 @@ function App() {
     <Router>
       <Switch>
         <Route path='/' component={HomePage} exact />
+        <Route path='/about' component={HomePage} exact />
+        <Route path='/discover' component={HomePage} exact />
+        <Route path='/learn' component={HomePage} exact />
         <Route path='/signin' component={SignInPage} exact />
         {/* <Route component={NotFoundPage}></Route> */}
       </Switch>
