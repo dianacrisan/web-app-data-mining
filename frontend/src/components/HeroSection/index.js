@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { HeroContainer, HeroBackground, VideoBackground, HeroContent, HeroBtnWrapper, HeroH1, HeroP, ArrowForward, ArrowRight } from './HeroElements';
+import { HeroContainer, HeroBackground, VideoBackground, HeroContent, HeroBtnWrapper, HeroH1, HeroP, ArrowForward, ArrowRight, ButtonLink } from './HeroElements';
 import Video from '../../videos/video.mp4';
-import { Button } from '../ButtonElements';
 
 const HeroSection = () => {
 
@@ -20,12 +19,12 @@ const HeroSection = () => {
                 <HeroH1>Data Mining Club</HeroH1>
                 <HeroP>Learn data science techniques and generate insights from your acquired data.</HeroP>
                 <HeroBtnWrapper>
-                    <Button to="signup" 
+                    <ButtonLink to="signup" 
                             onMouseEnter={onHover} onMouseLeave={onHover}
                             primary="true"
                             dark="true">
                         Let's begin {hover ? <ArrowForward /> : <ArrowRight />}
-                    </Button>
+                    </ButtonLink>
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>

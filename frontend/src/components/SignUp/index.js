@@ -21,7 +21,7 @@ const SignUp = () => {
                             <FormLabel htmlFor='for'>Repeat password</FormLabel>
                             <FormInput type="password" required />
                             <FormButton type="submit">Sign Up</FormButton>
-                            <FormText to="signin">Back to sign in</FormText>
+                            <FormText to="signin">Have an account? Go to sign in.</FormText>
                         </Form>
                     </FormContent>
                 </FormWrap>

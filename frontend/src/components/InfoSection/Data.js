@@ -26,7 +26,7 @@ export const homeDiscoverObject = {
     headline: 'Explore Data Mining Steps',
     description: 'Find out more about the steps involved in data mining and' 
         + ' implement them on your own.',
-    buttonLabel: 'Sign Up',
+    buttonLabel: 'Sign In',
     imgStart: true,
     img: require('../../images/data.svg').default,
     alt: 'discover',
