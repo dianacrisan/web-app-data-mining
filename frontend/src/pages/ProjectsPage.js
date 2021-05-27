@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import MainMenu from '../components/MainMenu'
 import MainNav from '../components/MainNav';
+import DescriptionComponent from '../components/DescriptionComponent';
+import { projectsDescription } from '../components/DescriptionComponent/Data'
+import UploadFileSection from '../components/UploadFileSection'
 import Footer from '../components/Footer';
 
-const MainPage = () => {
+
+const ProjectsPage = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,13 +17,13 @@ const MainPage = () => {
 
     return (
         <>
-            {/* din componente pune meniu stanga */}
             <MainMenu isOpen={isOpen} toggle={toggle} />
             <MainNav toggle={toggle}/>
-            <h1>DATA MINING EXPLAINED - STATIC PAGE</h1>
+            <DescriptionComponent {...projectsDescription} />
+            <UploadFileSection />
             <Footer />
         </>
     )
 };
 
-export default MainPage;
+export default ProjectsPage;

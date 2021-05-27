@@ -9,23 +9,20 @@ const MainMenu = ({toggle, isOpen}) => {
             </Icon>
             <MainMenuWrapper>
                 <MainMenuItems>
-                    <MainMenuLink to="" onClick={toggle}>
+                    <MainMenuLink to="/main" onClick={toggle}>
                         Data Mining Explained
                     </MainMenuLink>
-                    <MainMenuLink to="" onClick={toggle}>
-                        Understand Web Scraping
+                    <MainMenuLink to="/projects" onClick={toggle}>
+                        Projects
                     </MainMenuLink>
-                    <MainMenuLink to="" onClick={toggle}>
-                        Datafiles Management
+                    {/* <MainMenuLink to="/reports" onClick={toggle}>
+                        Project Reports
+                    </MainMenuLink> */}
+                    <MainMenuLink to="/documentation" onClick={toggle}>
+                        Abouth the App
                     </MainMenuLink>
-                    <MainMenuLink to="" onClick={toggle}>
-                        Data Reports
-                    </MainMenuLink>
-                    <MainMenuLink to="" onClick={toggle}>
-                        Application Documentation
-                    </MainMenuLink>
-                    <MainMenuLink to="" onClick={toggle}>
-                        Profile Information
+                    <MainMenuLink to="/profile" onClick={toggle}>
+                        Profile
                     </MainMenuLink>
                 </MainMenuItems>
                 <MainMenuBtnWrap>

@@ -4,6 +4,10 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import MainPage from './pages/MainPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ReportsPage from './pages/ReportsPage';
+import AppDocumentationPage from './pages/AppDocumentationPage';
+import ProfilePage from './pages/ProfilePage';
 import NotFound from './components/NotFound';
 
 function App() {
@@ -17,9 +21,14 @@ function App() {
         <Route path='/signin' component={SignInPage} exact />
         <Route path='/signup' component={SignUpPage} exact />
         <Route path='/main' component={MainPage} exact />
+        <Route path='/projects' component={ProjectsPage} exact />
+        <Route path='/reports' component={ReportsPage} exact />
+        <Route path='/documentation' component={AppDocumentationPage} exact />
+        <Route path='/profile' component={ProfilePage} exact />
         <Route component={NotFound}/>
       </Switch>
     </Router>
+    
   );
 }
 

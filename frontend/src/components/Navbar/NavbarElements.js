@@ -45,10 +45,10 @@ export const MenuIcon=styled.div`
 
     @media screen and (max-width: 768px) {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        transform: translate(-100%, 40%);
         font-size: 1.8rem;
         cursor: pointer;
         color: #fff;
@@ -57,9 +57,9 @@ export const MenuIcon=styled.div`
 
 export const NavMenu = styled.ul`
     display: flex;
-    align-items: center;
+    align-items: top;
     list-style: none;
-    text-align: center;
+    text-align: center ;
     margin-right: -22px;
 
     @media screen and (max-width: 768px) {
@@ -72,11 +72,11 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-    color: #fff;
+    color: #fff !important;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 1rem ;
     height: 100%;
     cursor: pointer;
 

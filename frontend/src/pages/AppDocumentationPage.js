@@ -3,7 +3,7 @@ import MainMenu from '../components/MainMenu'
 import MainNav from '../components/MainNav';
 import Footer from '../components/Footer';
 
-const MainPage = () => {
+const AppDocumentationPage = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,13 +13,13 @@ const MainPage = () => {
 
     return (
         <>
-            {/* din componente pune meniu stanga */}
             <MainMenu isOpen={isOpen} toggle={toggle} />
             <MainNav toggle={toggle}/>
-            <h1>DATA MINING EXPLAINED - STATIC PAGE</h1>
+            <h1>DOCUMENTATION - STATIC PAGE</h1>
+
             <Footer />
         </>
     )
 };
 
-export default MainPage;
+export default AppDocumentationPage;
