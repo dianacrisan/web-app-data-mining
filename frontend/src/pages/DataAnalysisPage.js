@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import MainMenu from '../components/MainMenu'
 import MainNav from '../components/MainNav';
 import DescriptionComponent from '../components/DescriptionComponent';
-import { projectsDescription } from '../components/DescriptionComponent/Data'
-import UploadFileSection from '../components/UploadFileSection'
+import { dataAnalysisDescription } from '../components/DescriptionComponent/Data'
 import Footer from '../components/Footer';
 
 
-const ProjectsPage = () => {
+const DataAnalysisPage = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,11 +18,10 @@ const ProjectsPage = () => {
         <>
             <MainMenu isOpen={isOpen} toggle={toggle} />
             <MainNav toggle={toggle}/>
-            <DescriptionComponent {...projectsDescription} />
-            <UploadFileSection />
+            <DescriptionComponent {...dataAnalysisDescription} />
             <Footer />
         </>
     )
 };
 
-export default ProjectsPage;
+export default DataAnalysisPage;

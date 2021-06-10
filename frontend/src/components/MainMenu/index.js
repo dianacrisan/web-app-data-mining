@@ -12,8 +12,8 @@ const MainMenu = ({toggle, isOpen}) => {
                     <MainMenuLink to="/main" onClick={toggle}>
                         Data Mining Explained
                     </MainMenuLink>
-                    <MainMenuLink to="/projects" onClick={toggle}>
-                        Projects
+                    <MainMenuLink to="/data-analysis" onClick={toggle}>
+                        Data Analysis Page
                     </MainMenuLink>
                     {/* <MainMenuLink to="/reports" onClick={toggle}>
                         Project Reports
