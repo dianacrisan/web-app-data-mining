@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import MainMenu from '../components/MainMenu'
 import MainNav from '../components/MainNav';
-import Footer from '../components/Footer';
+import FooterMain from '../components/FooterMain';
+import DescriptionComponent from '../components/DescriptionComponent';
+import InfoSection from '../components/InfoSection';
+import { dataMiningConceptsDescription } from '../components/DescriptionComponent/Data'
+import { mainAcquiringStep, mainPreprocessingStep, mainAnalysisStept, mainVisualizationStep } from '../components/InfoSection/Data'
 
 const MainPage = () => {
 
@@ -16,8 +20,12 @@ const MainPage = () => {
             {/* din componente pune meniu stanga */}
             <MainMenu isOpen={isOpen} toggle={toggle} />
             <MainNav toggle={toggle}/>
-            <h1>DATA MINING EXPLAINED - STATIC PAGE</h1>
-            <Footer />
+            <DescriptionComponent {...dataMiningConceptsDescription} />
+            <InfoSection {...mainAcquiringStep} />
+            <InfoSection {...mainPreprocessingStep} />
+            <InfoSection {...mainAnalysisStept} />
+            <InfoSection {...mainVisualizationStep} />
+            <FooterMain />
         </>
     )
 };

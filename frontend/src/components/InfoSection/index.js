@@ -1,7 +1,7 @@
 import React from 'react';
 import { TopLine, InfoContainer, BtnWrap, ButtonLink, InfoWrapper, Img, Subtitle, InfoRow, Column1, Column2, Heading, ImgWrap, TextWrapper } from './InfoSectionElements';
 
-const InfoSection = ({primary, dark, dark2, lightBg, id, imgStart, topLine, lightText, darkText, headline, description, buttonLabel, img, alt}) => {
+const InfoSection = ({path, primary, dark, dark2, lightBg, id, imgStart, topLine, lightText, darkText, headline, description, buttonLabel, img, alt}) => {
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id}>
@@ -13,8 +13,8 @@ const InfoSection = ({primary, dark, dark2, lightBg, id, imgStart, topLine, ligh
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <ButtonLink to='/signin'
-                                            smooth={true}
+                                    <ButtonLink to={path}
+                                            // smooth={true}
                                             duration={500}
                                             spy={true}
                                             exact="true"

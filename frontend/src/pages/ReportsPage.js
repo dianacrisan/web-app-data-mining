@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MainMenu from '../components/MainMenu'
 import MainNav from '../components/MainNav';
-import Footer from '../components/Footer';
+import FooterMain from '../components/FooterMain';
 
 
 const ReportsPage = () => {
@@ -18,7 +18,7 @@ const ReportsPage = () => {
             <MainNav toggle={toggle}/>
             <h1>REPORTS</h1>
 
-            <Footer />
+            <FooterMain />
         </>
     )
 };

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import MainMenu from '../components/MainMenu'
 import MainNav from '../components/MainNav';
-import Footer from '../components/Footer';
+import FooterMain from '../components/FooterMain';
+import DescriptionComponent from '../components/DescriptionComponent';
+import { aboutAppDescription } from '../components/DescriptionComponent/Data'
 
 const AppDocumentationPage = () => {
 
@@ -15,9 +17,9 @@ const AppDocumentationPage = () => {
         <>
             <MainMenu isOpen={isOpen} toggle={toggle} />
             <MainNav toggle={toggle}/>
-            <h1>DOCUMENTATION - STATIC PAGE</h1>
+            <DescriptionComponent {...aboutAppDescription} />
 
-            <Footer />
+            <FooterMain />
         </>
     )
 };

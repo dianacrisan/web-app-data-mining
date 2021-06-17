@@ -67,7 +67,7 @@ export const FormH1 = styled.h1`
     font-weight: 400;
     font-size: 24px;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 `;
 
 export const FormLabel = styled.label`
@@ -104,4 +104,5 @@ export const FormText = styled(Link)`
     margin-top: 32px;
     color: #fff;
     font-size: 14px;
+    margin-bottom: 20px;
 `;
