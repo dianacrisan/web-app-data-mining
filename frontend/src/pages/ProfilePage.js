@@ -4,6 +4,10 @@ import MainNav from '../components/MainNav';
 import FooterMain from '../components/FooterMain';
 import DescriptionComponent from '../components/DescriptionComponent';
 import { profileDescription } from '../components/DescriptionComponent/Data'
+import UpdateInfoComponent from '../components/UpdateInfoComponent';
+import { updateInfoDescription } from '../components/UpdateInfoComponent/Data';
+import ProfileInfoCard from '../components/ProfileInfoCard';
+import { InfoWrapper, InfoContainer } from '../components/DescriptionComponent/DescriptionComponentElements';
 
 const ProfilePage = () => {
 
@@ -17,7 +21,13 @@ const ProfilePage = () => {
         <>
             <MainMenu isOpen={isOpen} toggle={toggle} />
             <MainNav toggle={toggle}/>
-            <DescriptionComponent {...profileDescription} />         
+            <DescriptionComponent {...profileDescription} />   
+            <UpdateInfoComponent {...updateInfoDescription}/> 
+            <InfoContainer lightBg={true}>
+                <InfoWrapper>
+                    <ProfileInfoCard />     
+                </InfoWrapper>
+            </InfoContainer>
             <FooterMain/>
         </>
     )

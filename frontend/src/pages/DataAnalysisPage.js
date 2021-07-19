@@ -5,8 +5,9 @@ import DescriptionComponent from '../components/DescriptionComponent';
 import { dataAnalysisDescription } from '../components/DescriptionComponent/Data'
 import FooterMain from '../components/FooterMain';
 import TimeSeriesChartSection from '../components/TimeSeriesChartSection';
-import { timeSeriesDescription } from '../components/TimeSeriesChartSection/Data'
-
+import { timeSeriesDescription } from '../components/TimeSeriesChartSection/Data';
+// import ProductsModificationsSection from '../components/ProductsModificationsSection';
+// import {productsModificationsDescription} from '../components/ProductsModificationsSection/Data'
 
 const DataAnalysisPage = () => {
 
@@ -22,6 +23,7 @@ const DataAnalysisPage = () => {
             <MainNav toggle={toggle}/>
             <DescriptionComponent {...dataAnalysisDescription} />
             <TimeSeriesChartSection {...timeSeriesDescription} />
+            {/* <ProductsModificationsSection {...productsModificationsDescription} /> */}
             <FooterMain />
         </>
     )

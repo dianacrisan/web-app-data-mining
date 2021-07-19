@@ -1,22 +1,24 @@
 import { React, useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormText, FormButton } from './SignInElements';
 import { Redirect } from 'react-router-dom';
+// import UserService from '../../services/UserService'
 const PORT = 3001;
-// import { useHistory } from "react-router";
 // const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 
-const SignIn = () => {
+const SignIn = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     const [loginStatus, setLoginStatus] = useState("");
-
     const [redirect, setRedirect] = useState(false);
 
-    const signin = () => {
-        Axios.post(`http://localhost:${PORT}/signin`, 
+    // const userService = new UserService();
+
+
+    const signin = async e => {
+        e.preventDefault();
+        axios.post(`http://localhost:${PORT}/signin`, 
             {
                 email: email,
                 password: password
@@ -27,8 +29,10 @@ const SignIn = () => {
                 setRedirect(false);
             }
             else {
-                setRedirect(true);
-                // window.location.href = process.env.REACT_APP_BASE_URL + '/main';
+                let user = response.data;
+                window.localStorage.setItem('currentUser', JSON.stringify(user));
+                // setRedirect(true);
+                window.location.href = process.env.REACT_APP_BASE_URL + '/main';
             }
         });
     }
@@ -41,6 +45,7 @@ const SignIn = () => {
 
     return (
         <>
+            {renderRedirect()}
             <Container>
                 <FormWrap>
                     <Icon to="/">dmc</Icon>
@@ -64,7 +69,6 @@ const SignIn = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-            {renderRedirect()}
 
         </>
     )

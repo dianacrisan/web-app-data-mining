@@ -30,15 +30,75 @@ app.post('/signin', (req, res) => {
         [email, password], 
         (err, result) => {
             if (err) {
+                console.log("error")
                 res.send({err: err});
             }  
-            else if (result.length > 0) {
+            // res.send(result);
+            if (result.length > 0) {
+                console.log("ok")
+                console.log(result)
                 res.send(result);
             } else {
+                console.log("wrong cred")
                 res.send({message: "Wrong credentials!"});
             }
         });
 })
+
+app.post('/delete-user', (req, res) => {
+    const id = req.body.id;
+    
+    db_connection.query("DELETE FROM users WHERE id = ?", 
+        [id], 
+        (err, result) => {
+            if (err) {
+                console.log("error")
+                res.send({err: err});
+            }  
+            if (result.length > 0) {
+                console.log("ok")
+                console.log(result)
+                res.send(result);
+        }});
+});
+
+app.post('/update-user', (req, res) => {
+    const id = req.body.id;
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+    const fullName = req.body.fullName;
+    
+    db_connection.query("UPDATE users SET full_name = ?, username = ?, email = ?, password = ? WHERE id = ?", 
+        [fullName, username, email, password, id], 
+        (err, result) => {
+            if (err) {
+                console.log("error")
+                res.send({err: err});
+            }  
+            else {
+                console.log(result);
+            }
+            });
+});
+
+app.post('/user-data', function (req, res) {
+    const id = req.body.id;
+    db_connection.query("SELECT * FROM users where id = ?", 
+        [id],
+        (err, result) => {
+            if (err) {
+                res.send({err: err});
+            }  
+            if (result.length > 0) {
+                console.log("result");
+                console.log(result);
+                res.send(result);
+            } else {
+                res.send({message: "Wrong database operation!"});
+            }
+        });
+});
 
 // data for analysis step
 app.post('/data-analysis', (req, res) => {
@@ -75,6 +135,22 @@ app.get('/search-products', function (req, res) {
         });
 });
 
+
+// data for products that have price modifications
+app.get('/modifications-products', function (req, res) {
+
+    db_connection.query("SELECT * FROM leroy_products where category='Materiale constructii'", 
+        (err, result) => {
+            if (err) {
+                res.send({err: err});
+            }  
+            if (result.length > 0) {
+                res.send(result);
+            } else {
+                res.send({message: "Wrong database operation!"});
+            }
+        });
+});
 
 
 app.listen(PORT, () => {

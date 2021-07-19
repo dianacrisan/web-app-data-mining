@@ -1,0 +1,51 @@
+.card {
+    padding: 20px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width:100%;
+    margin-bottom: 100px !important;
+}
+
+.card-title {
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+.infoCard-container {
+    width: 70%;   
+}
+
+.profile-card {
+    background-color: #464442 !important;
+}
+
+.card-header {
+    background-color: #11c0b9 !important;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.profile-card-btn {
+    margin: 10px;
+    color: #fff !important;
+    padding: 10px;
+    transition: all .2s ease-in-out !important;
+    background: #11c0b9 !important;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.profile-card-btn:hover{
+    transform: scale(1.2);
+}
+
+.profile-card-text {
+    font-weight: 500;
+    color: #fff;
+}
